@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field, constr
 
 class LinkModel(BaseModel):
     rel: str
-    href: constr(regex="^/.*$")  # must start with `/`
+    href: constr(regex="^/.*$")  # type: ignore
     method: Literal[
         "GET",
         "HEAD",
